@@ -13,6 +13,10 @@ This repository contains the code implementation for the LogCraft log anomaly de
 
 ## Install
 
+```shell
+pip install -r requirements.txt
+```
+
 ## Experiment
 
 Get Sentence-Transformer

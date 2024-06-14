@@ -163,15 +163,31 @@ class MetaODClass(object):
             self.item_vectors = np.delete(self.item_vectors, nan_indices, axis=1)
 
             return test_meta
-        else:
-            print("No nan")
+
+    def fill_nan_columns(self, test_meta):
+        nan_positions = np.isnan(test_meta)
+
+        if nan_positions.any():
+            nan_indices = np.where(nan_positions)[1]  # 获取 NaN 的索引列表，选择列索引
+
+            # 将 NaN 值填充为 0
+            for column_index in np.unique(nan_indices):
+                test_meta[:, column_index] = 0
+
+            # 更新 item_vectors 中对应列的值
+            for column_index in np.unique(nan_indices):
+                self.item_vectors[:, column_index] = 0
+
+            return test_meta
+
+
     def check_and_prepare_meta(self, test_meta):
         # 检查 test_meta 是否有 NaN 并进行处理
         try:
             test_meta = check_array(test_meta)
         except ValueError:
             # 有 NaN 处理
-            test_meta = self.remove_nan_columns(test_meta)
+            test_meta = self.fill_nan_columns(test_meta)
         return test_meta
 
     def predict(self, test_meta):
