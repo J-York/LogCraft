@@ -1,0 +1,161 @@
+{
+    "datasets": [
+        "bgl",
+        "hdfs",
+        "liberty",
+        "spirit",
+        "tb"
+    ],
+    "models": [
+        [
+            {
+                "model": "DeepLog",
+                "epoches": 2,
+                "window_size": 100,
+                "num_layers": 2,
+                "stride": 100.0,
+                "hidden_size": 256
+            }
+        ],
+        [
+            {
+                "model": "DeepLog",
+                "epoches": 2,
+                "window_size": 100,
+                "num_layers": 6,
+                "stride": 50.0,
+                "hidden_size": 64
+            }
+        ],
+        [
+            {
+                "model": "DeepLog",
+                "epoches": 2,
+                "window_size": 60,
+                "num_layers": 4,
+                "stride": 60.0,
+                "hidden_size": 64
+            }
+        ],
+        [
+            {
+                "model": "DeepLog",
+                "epoches": 2,
+                "window_size": 100,
+                "num_layers": 2,
+                "stride": 50.0,
+                "hidden_size": 256
+            }
+        ],
+        [
+            {
+                "model": "DeepLog",
+                "epoches": 2,
+                "window_size": 60,
+                "num_layers": 2,
+                "stride": 60.0,
+                "hidden_size": 256
+            }
+        ],
+        [
+            {
+                "model": "LogAnomaly",
+                "window_size": 20,
+                "num_layers": 2,
+                "hidden_size": 256,
+                "stride": 10,
+                "epoches": 2
+            }
+        ],
+        [
+            {
+                "model": "LogAnomaly",
+                "window_size": 20,
+                "num_layers": 6,
+                "hidden_size": 128,
+                "stride": 20,
+                "epoches": 2
+            }
+        ],
+        [
+            {
+                "model": "LogAnomaly",
+                "epoches": 2,
+                "window_size": 60,
+                "num_layers": 6,
+                "stride": 60.0,
+                "hidden_size": 64
+            }
+        ],
+        [
+            {
+                "model": "LogAnomaly",
+                "window_size": 100,
+                "num_layers": 2,
+                "hidden_size": 256,
+                "stride": 100,
+                "epoches": 2
+            }
+        ],
+        [
+            {
+                "model": "LogAnomaly",
+                "window_size": 60,
+                "num_layers": 2,
+                "hidden_size": 256,
+                "stride": 30,
+                "epoches": 2
+            }
+        ],
+        [
+            {
+                "model": "Transformer",
+                "epoches": 2,
+                "window_size": 60,
+                "num_layers": 6,
+                "stride": 30.0,
+                "hidden_size": 64
+            }
+        ],
+        [
+            {
+                "model": "Transformer",
+                "epoches": 2,
+                "window_size": 60,
+                "num_layers": 6,
+                "stride": 30.0,
+                "hidden_size": 128
+            }
+        ],
+        [
+            {
+                "model": "Transformer",
+                "epoches": 2,
+                "window_size": 100,
+                "num_layers": 6,
+                "stride": 100.0,
+                "hidden_size": 256
+            }
+        ],
+        [
+            {
+                "model": "Transformer",
+                "epoches": 2,
+                "window_size": 60,
+                "num_layers": 4,
+                "stride": 30.0,
+                "hidden_size": 256
+            }
+        ],
+        [
+            {
+                "model": "Transformer",
+                "epoches": 2,
+                "window_size": 100,
+                "num_layers": 2,
+                "stride": 100.0,
+                "hidden_size": 64
+            }
+        ]
+    ]
+}
