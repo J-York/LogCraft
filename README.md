@@ -9,7 +9,7 @@ This repository contains the code implementation for the LogCraft log anomaly de
 - Ubuntu 22.04
 - CUDA Version 12.2
 - NVIDIA Driver Version 535.129.03
-- Python 3.8
+- Python 3.9
 
 ## Install
 

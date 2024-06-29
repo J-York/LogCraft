@@ -1,5 +1,4 @@
 .ipynb_checkpoints/
-data/*
 data_preprocessed/*
 demo/test_run_result.txt
 models/stransformer/*
