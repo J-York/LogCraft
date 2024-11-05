@@ -122,22 +122,6 @@ if __name__ == '__main__':
         },
         "device":params["gpu"]}
     
-    # 提交作业任务
-    pid = os.getpid()
-    url = 'http://10.10.1.210/api/v1/job/create'
-    data = {
-        'student_id': '2120220685',
-        'password': 'Jyh925471',
-        'description': '测试任务',
-        'server_ip': '10.10.1.219',
-        'duration': '几天',
-        'pid': pid,
-        'server_user': 'zhangshenglin',
-        'command': 'python',
-        'use_gpu': 1 if params["gpu"] >= 0 else 0,
-    }
-    r = requests.post(url, data=data)
-    print('210 reqeat: ', r.text)
     # model.load_state_dict(torch.load('../middle/pretrained_models/transformer_tb.pth'))
 
     session_train, session_test = load_sessions(data_dir=params["data_dir"])
